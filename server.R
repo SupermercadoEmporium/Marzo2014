@@ -19,7 +19,7 @@ shinyServer(function(input, output) {
   output$confidencemarzo<-renderPrint({
     x<-input$select
     y<-input$select2
-    paste("Confidence",round(a_matrix_mar[x,y]/round(a_matrix_mar[x,x], digits=4))
+    paste("Confidence",round(a_matrix_mar[x,y]/a_matrix_mar[x,x], digits=4))
   })
   
   output$liftmarzo<-renderPrint({
