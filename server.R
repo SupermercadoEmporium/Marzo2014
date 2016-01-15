@@ -25,7 +25,7 @@ shinyServer(function(input, output) {
   output$liftmarzo<-renderPrint({
     x<-input$select
     y<-input$select2
-    paste("Lift", round(round(a_matrix_mar[x,y], digits=4)/(round(a_matrix_mar[x,x], digits=4)*round(a_matrix_mar[y,y], digits=4)), digits=4))
+    paste("Lift", round(round(a_matrix_mar[x,y]/a_matrix_mar[x,x], digits=4)/round(a_matrix_mar[y,y], digits=4), digits=4))
   })
   
   output$tablanamecat1marzo<-renderText({
